@@ -15,7 +15,7 @@ public class RacingCarGame {
     public void run() {
         Integer totalRound = InputView.inputTotalRound();
 
-        System.out.printf("\n실행 결과");
+        System.out.println("\n실행 결과");
 
         while (--totalRound >= 0) {
             cars.move();

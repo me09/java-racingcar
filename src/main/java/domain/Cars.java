@@ -12,10 +12,10 @@ public class Cars {
 
     public Cars(String carNames) {
         this.cars = new ArrayList<>();
-        divideCarNames(carNames);
+        splitCarNames(carNames);
     }
 
-    private void divideCarNames(String carNames) {
+    private void splitCarNames(String carNames) {
         String[] names = carNames.split(",");
 
         for (int i = 0; i < names.length; i++) {

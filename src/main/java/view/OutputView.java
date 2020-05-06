@@ -8,10 +8,11 @@ import java.util.StringJoiner;
 public class OutputView {
     private static final String COLON = ":";
     private static final String SPACE = " ";
+    private static final String NEW_LINE = "\n";
+
     private static final String FORWARD_SIGN = "-";
     private static final String STRING_JOINER = ", ";
     private static final String RESULT_SENTENCE = "가 최종 우승했습니다.";
-    private static final String NEW_LINE_TWICE = "\n\n";
 
     public static void printRecords(Records records) {
         for (int i = 0; i < records.size(); i++) {
@@ -19,7 +20,7 @@ public class OutputView {
             printPosition(records.getPosition(i));
             System.out.println();
         }
-        System.out.println(NEW_LINE_TWICE);
+        System.out.println(NEW_LINE);
     }
 
     private static void printName(String name) {
