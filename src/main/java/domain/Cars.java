@@ -5,6 +5,9 @@ import java.util.ArrayList;
 import java.util.stream.Stream;
 
 public class Cars {
+    private static final Integer MAX_NAME_LENGTH = 5;
+    private static final String MAX_NAME_LENGTH_ERROR = "이름은 5자 이하만 가능합니다.";
+
     private static List<Car> cars;
 
     public Cars(String carNames) {
@@ -22,6 +25,9 @@ public class Cars {
         String[] names = carNames.split(",");
 
         for (int i = 0; i < names.length; i++) {
+            if (names[i].length() > MAX_NAME_LENGTH) {
+                throw new IllegalArgumentException(MAX_NAME_LENGTH_ERROR);
+            }
             createCar(names[i]);
         }
     }

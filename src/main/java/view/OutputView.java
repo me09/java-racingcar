@@ -11,15 +11,15 @@ public class OutputView {
     private static final String FORWARD_SIGN = "-";
     private static final String STRING_JOINER = ", ";
     private static final String RESULT_SENTENCE = "가 최종 우승했습니다.";
+    private static final String NEW_LINE_TWICE = "\n\n";
 
     public static void printRecords(Records records) {
-        System.out.println();
         for (int i = 0; i < records.size(); i++) {
             printName(records.getName(i));
             printPosition(records.getPosition(i));
             System.out.println();
         }
-        System.out.println();
+        System.out.println(NEW_LINE_TWICE);
     }
 
     private static void printName(String name) {
