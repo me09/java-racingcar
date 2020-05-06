@@ -15,13 +15,7 @@ public class Cars {
         divideCarNames(carNames);
     }
 
-    public void move() {
-        for (int i = 0; i < cars.size(); i++) {
-            cars.get(i).movePosition();
-        }
-    }
-
-    public void divideCarNames(String carNames) {
+    private void divideCarNames(String carNames) {
         String[] names = carNames.split(",");
 
         for (int i = 0; i < names.length; i++) {
@@ -32,9 +26,15 @@ public class Cars {
         }
     }
 
-    public void createCar(String carName) {
+    private void createCar(String carName) {
         Car car = new Car(carName);
         cars.add(car);
+    }
+
+    public void move() {
+        for (int i = 0; i < cars.size(); i++) {
+            cars.get(i).movePosition();
+        }
     }
 
     public Stream<Car> stream() {
